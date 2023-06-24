@@ -1,1 +1,234 @@
 /* You can add global styles to this file, and also import other style files */
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+
+* {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.container {
+  background-color: #e5fafa;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.player {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 600px;
+}
+
+.text-title {
+  font-size: 30px;
+  font-weight: bold;
+  color: rgb(29, 95, 98);
+  margin-bottom: 20px;
+}
+.text-title b {
+  display: block;
+  font-size: 15px;
+  color: rgb(45, 146, 152);
+}
+
+
+input {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  border: 1px solid rgb(200, 200, 200);
+  color: rgb(29, 95, 98);
+  font-size: 16px;
+  border-radius: 10px;
+  transition: all 300ms linear;
+}
+
+input:focus {
+  outline: none;
+  border-color: rgb(29, 95, 98);
+}
+
+button {
+  background-color: rgb(29, 95, 98);
+  color: white;
+  padding: 8px 16px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  transition: all 200ms linear;
+}
+
+button:hover {
+ background-color: rgb(19, 59, 61)
+}
+
+button.big {
+  font-size: 20px;
+  margin-top: 10px;
+}
+
+
+/* ALERTAS */
+.alert {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border-radius: 10px;
+  font-weight: bold;
+}
+
+.alert.success {
+  background-color: rgb(149, 252, 218);
+  color: rgb(18, 108, 78);
+}
+.alert.error {
+  background-color: rgb(252, 149, 149);
+  color: rgb(108, 18, 18);
+}
+
+.question {
+ max-width: 600px;
+ padding: 8px;
+}
+
+.answers {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+}
+
+.answer-option {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  background-color: white;
+  border-radius: 10px;
+  padding: 10px;
+  margin-bottom: 10px;
+  width: 100%;
+  transition: all 200ms linear;
+  cursor: pointer;
+}
+
+.answer-option.error {
+  background-color: rgb(255, 210, 210);
+  color: rgb(250, 80, 80);
+}
+
+.answer-option.correct {
+  background-color:  rgb(191, 247, 250);
+  color:  rgb(29, 95, 98);
+}
+
+.answer-option:hover:not(.error):not(.correct) {
+  background-color:  rgb(191, 211, 250);
+  color:  rgb(29, 55, 98);
+}
+
+
+/* TIMER */
+
+.timer {
+  font-size: 30px;
+  font-weight: bold;
+  color: black;
+  margin-bottom: 10px;
+}
+
+.timer > span {
+  font-size: 15px;
+  color: rgb(0, 174, 255);
+}
+
+.timer.warning {
+  color: rgb(248, 147, 23);
+}
+
+.timer.danger {
+  color: rgb(251, 57, 36);
+}
+
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  max-width: 600px;
+}
+
+table th, table td {
+  padding: 10px;
+  border: 1px solid rgba(220, 220, 220, 0.503);
+}
+
+table th {
+  background-color: rgb(29, 95, 98);
+  color: white;
+  font-weight: bold;
+}
+
+table th:first-child {
+  border-top-left-radius: 10px;
+}
+
+table th:last-child {
+  border-top-right-radius: 10px;
+}
+
+table tr:hover {
+  background-color: rgb(215, 246, 248);
+}
+
