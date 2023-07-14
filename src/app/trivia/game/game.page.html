@@ -1,0 +1,16 @@
+
+<timer [seconds]="this.triviaService.seconds"></timer>
+
+<div class="question">
+  <div class="text-title">
+    <h2><b>({{ this.triviaService.questionIndex + 1 }}/{{ this.triviaService.questions.length }}) | {{ this.triviaService.currentQuestion.category }}</b> {{ this.triviaService.currentQuestion.question }}</h2>
+  </div>
+
+  <div class="answers">
+      <answer-option
+      (click)="this.triviaService.nextQuestion(option)"
+      *ngFor="let option of this.triviaService.currentQuestion.options"
+      [type]="getAnswerType(option)"
+      [text]="option.text"></answer-option>
+  </div>
+ </div>

@@ -1,0 +1,13 @@
+  <div class="player">
+    <h2 class="text-title">¿Como te llamas?</h2>
+    <input [(ngModel)]="name" type="text">
+  </div>
+  <mi-boton
+  (click)="startGame()"
+  [big]="true" texto="Iniciar"></mi-boton>
+  <alert
+  style="margin-top: 10px; display: block; width: 100%;"
+  *ngIf="showNameError"
+  type="error"
+  text="Ingresa el nombre correctamente"></alert>
+

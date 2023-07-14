@@ -1,0 +1,25 @@
+<table>
+  <thead>
+    <tr>
+      <th>Nombre</th>
+      <th>Score</th>
+      <th>Fecha</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let playerScore of this.triviaService.getScores()">
+      <td>{{ playerScore.name }}</td>
+      <td>{{ playerScore.score }} </td>
+      <td>{{ playerScore.date | date: 'dd/MM/YY hh:ss' }}</td>
+    </tr>
+
+  </tbody>
+</table>
+
+
+<mi-boton
+  (click)="goToStart()"
+ style="margin-top: 20px; display: inline-block;" texto="Ir al inicio"></mi-boton>
+<mi-boton
+  (click)="restartGame()"
+style="margin-top: 20px; display: inline-block; margin-left: 15px;" texto="Jugar de nuevo"></mi-boton>
